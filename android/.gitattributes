@@ -1,3 +1,10 @@
 *.dart linguist-language=Dart
 ios/* linguist-vendored
 android/* linguist-vendored
+
+# Do not detect
+*.cc -linguist-detectable
+*.cpp -linguist-detectable
+
+# Detect
+*.dart linguist-detectable
