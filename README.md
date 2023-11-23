@@ -15,6 +15,7 @@ To get started with this project, clone the repository and run the following com
 ```bash
 flutter pub get
 flutter run
+```
 
 ## Usage
 This demo app illustrates the implementation of a foreground service in Flutter. You can start, pause, and reset a counter that runs in the foreground. 
