@@ -18,7 +18,7 @@ flutter run
 ```
 
 ## Usage
-This demo app illustrates the implementation of a foreground service in Flutter. You can start, pause, and reset a counter which keeps running as foreground service when the app is minimized or not the active app on your phone.
+This demo application showcases a foreground service implementation using Flutter. It features an interactive counter that continuously operates as a foreground service, ensuring uninterrupted functionality even when the app is minimized or running in the background on your device.
 
 ## Contributing
 Contributions to this project are welcome. Here are some ways you can contribute:
