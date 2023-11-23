@@ -1,4 +1,4 @@
-#  Keep Counting - a basic Flutter Foreground Service Demo App
+#  Keep Counting - a basic Flutter Foreground Service Demo App (Android)
 
 ## Introduction
 This project is a demonstration Flutter application showcasing the basic usage of the  [`flutter_foreground_task`](https://pub.dev/packages/flutter_foreground_task) package. Its primary focus is to exemplify the implementation of bidirectional communication between the main app and a foreground service.
@@ -26,8 +26,6 @@ Contributions to this project are welcome. Here are some ways you can contribute
 - Suggesting enhancements.
 - Submitting pull requests with improvements.
 
-## Discussion
-Join the discussion on [Flutter Community Forums](#) or [GitHub Discussions](#) (links to be provided).
 
 ## Note
 This app is for demonstration purposes and is part of an ongoing discussion in the Flutter community. It is not intended to be used as a production-ready template yet.
