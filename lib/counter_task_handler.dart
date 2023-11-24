@@ -27,7 +27,7 @@ class CounterTaskHandler extends TaskHandler {
       }
     });
 
-    _counter.onCurrentNumberUpdate = (value) {
+    _counter.onStateChanged = (value) {
       _updateNotification();
     };
 

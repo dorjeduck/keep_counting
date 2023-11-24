@@ -26,8 +26,8 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     _requestPermissionForAndroid();
-    _counter.onCurrentNumberUpdate = (value) => setState(() {});
-    _counter.onIsRunningChange = (isRunning) => setState(() {});
+    _counter.onStateChanged = (value) => setState(() {});
+  
   }
 
   @override

@@ -5,12 +5,12 @@ class Counter {
   CounterState _state;
   Timer? _timer;
 
-  Function(int)? onCurrentNumberUpdate;
-  Function(bool)? onIsRunningChange;
-
+  Function(CounterState)? onStateChanged;
+ 
   Counter({CounterState? state})
       : _state = state ?? CounterState(currentNumber: 0, isRunning: false) {
         _manageTimer(); 
+      
       }
 
   int get currentNumber => _state.currentNumber;
@@ -25,7 +25,7 @@ class Counter {
 
   void _incrementCounter() {
     _state = CounterState(currentNumber: _state.currentNumber + 1, isRunning: _state.isRunning);
-    onCurrentNumberUpdate?.call(_state.currentNumber);
+    onStateChanged?.call(_state);
   }
 
   // Method to explicitly set the running state
@@ -44,7 +44,7 @@ class Counter {
 
   // Helper method to manage the timer based on the current state
   void _manageTimer() {
-    onIsRunningChange?.call(_state.isRunning);
+    onStateChanged?.call(_state);
 
     if (_state.isRunning) {
       _timer ??= Timer.periodic(const Duration(seconds: 1), (Timer t) => _incrementCounter());
@@ -56,8 +56,7 @@ class Counter {
 
   void resetCounter() {
     _state = CounterState(currentNumber: 0, isRunning: false);
-    onCurrentNumberUpdate?.call(_state.currentNumber);
-    onIsRunningChange?.call(_state.isRunning);
+    onStateChanged?.call(_state);
     _timer?.cancel();
     _timer = null;
   }
